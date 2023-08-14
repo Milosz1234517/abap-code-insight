@@ -59,14 +59,15 @@ public class Cds1ElementParser implements IAbapElementParser {
 
 			final IAdtClientStructuralInfoService adtClientStructuralInfoService = new AdtClientStructuralInfoService();
 			IObjectStructureElement objectStructureElement = adtClientStructuralInfoService
-					.calculateStructureElement(file, doc.get(), null, adtObject);
+					.calculateStructureElement(file, doc, null, adtObject);
+			//.calculateStructureElement(file, doc.get(), null, adtObject);
 
 			final IAdtStructuralInfoService adtStructuralInfoService = AbapSourceUi.getInstance()
 					.getOrCreateStructuralInfoService();
 			final AdtOutlineTreeContentProvider outlineTreeContentProvider = new AdtOutlineTreeContentProvider(
 					adtStructuralInfoService);
 			AdtStructuralInfoService.INJECTED_USE_CLIENT_SIDE_OUTLINE = true;
-			final List<EditorSource> editorSources = Arrays.asList(new EditorSource(file, doc.get(), 0, null));
+			final List<EditorSource> editorSources = Arrays.asList(new EditorSource(file, doc, 0, null));
 			objectStructureElement = adtStructuralInfoService.getOrLoadObjectStructure(file, adtObject, editorSources,
 					false, new NullProgressMonitor());
 			adtStructuralInfoService.mergeClientResultWithExistingOutline(adtObject);

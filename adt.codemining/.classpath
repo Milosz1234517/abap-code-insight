@@ -1,52 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
-		<accessrules>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/sources/AdtSourceServicesFactory"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/sources/IAdtSourceServicesFactory"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/sources/codeelementinformation/ICodeElementInformationBackendService"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/core/IAdtObjectReference"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/internal/sources/codeelementinformation/ICodeElement"/>
-			<accessrule kind="accessible" pattern="org/eclipse/jdt/internal/ui/javaeditor/EditorUtility"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/internal/sources/codeelementinformation/ICodeElement/*"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/core/model/util/ServiceNotAvailableException"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/search/usagereferences/IAdtRisUsageReferencesSearchService"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/search/usagereferences/AdtRisUsageReferencesSearchServiceFactory"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/model/usagereferences/IUsageReferenceResult"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/model/usagereferences/IUsageReferenceRequest"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/model/usagereferences/IUsageReferencedObjects"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/model/usagereferences/IUsageReferencedObject"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/debugger/IAbapStackFrame"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/debugger/variable/IAbapVariable"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/sources/objectstructure/IObjectStructureElement"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/tools/abapsource/sources/objectstructure/IObjectStructureService"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/debugger/variables/IAbapVariable"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/debugger/variables/IAbapVariableValue"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/search/ui/usagereferences/AdtRisUsageReferencesSearchQuery"/>
-			<accessrule kind="accessible" pattern="com/sap/adt/ris/search/ui/usagereferences/AdtRisUsageReferencesSearchQueryParameters"/>
-		</accessrules>
-	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="src">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="test">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
-			<attribute name="test" value="true"/>
-			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="test">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>

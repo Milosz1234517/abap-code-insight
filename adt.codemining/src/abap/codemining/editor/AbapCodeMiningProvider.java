@@ -20,6 +20,7 @@ import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jface.text.ITextViewer;
 import org.eclipse.jface.text.codemining.AbstractCodeMiningProvider;
 import org.eclipse.jface.text.codemining.ICodeMining;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.texteditor.ITextEditor;
 
 import com.sap.adt.tools.core.IAdtObjectReference;
@@ -58,7 +59,11 @@ public class AbapCodeMiningProvider extends AbstractCodeMiningProvider {
 			final ITextEditor textEditor = super.getAdapter(ITextEditor.class);
 
 			if (featureFacade.getPerformanceFeature().isActive()) {
-				abapCodeMiningPluginHelper.reinitViewInReconcilers(viewer);
+				Display.getDefault().asyncExec(new Runnable() {
+				    public void run() {
+				    	abapCodeMiningPluginHelper.reinitViewInReconcilers(viewer);
+				    }
+				});
 			}
 
 			try {
